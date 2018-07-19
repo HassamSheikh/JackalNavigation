@@ -21,12 +21,12 @@ class _Getch:
 
 
 class Jackal(object):
-    def __init__():
+    def __init__(self):
         self.pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
         rospy.init_node('controller', anonymous=True)
         self.rate = rospy.Rate(10)
 
-    def move(twist):
+    def move(self, twist):
         counter = 0
 
         while not rospy.is_shutdown() and counter < 1 :
@@ -35,22 +35,21 @@ class Jackal(object):
             self.pub.publish(move_forward_twist)
             self.rate.sleep()
 
-    def move_forward():
-        move(Twist(Vector3(0.5, 0, 0), Vector3(0, 0 ,0)))
+    def move_forward(self):
+        self.move(Twist(Vector3(0.5, 0, 0), Vector3(0, 0 ,0)))
 
-    def move_backward():
-        move(Twist(Vector3(-0.5, 0, 0), Vector3(0, 0 ,0)))
+    def move_backward(self):
+        self.move(Twist(Vector3(-0.5, 0, 0), Vector3(0, 0 ,0)))
 
-    def turn_right():
-        move(Twist(Vector3(0, 0, 0), Vector3(0, 0 ,-0.5)))
+    def turn_right(self):
+        self.move(Twist(Vector3(0, 0, 0), Vector3(0, 0 ,-0.5)))
 
-    def turn_left():
-        move(Twist(Vector3(0, 0, 0), Vector3(0, 0 ,0.5)))
+    def turn_left(self):
+        self.move(Twist(Vector3(0, 0, 0), Vector3(0, 0 ,0.5)))
 
 
 def get():
     inkey = _Getch()
-    jackal = Jackal()
     while(1):
         k=inkey()
         if k!='':break
@@ -71,6 +70,7 @@ def get():
 
 
 if __name__ == '__main__':
+    jackal = Jackal()
     while True:
         get()
 

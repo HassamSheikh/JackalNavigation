@@ -12,7 +12,7 @@ RUN git clone https://github.com/siavash-khodadadeh/JackalNavigation.git ~/catki
 RUN cd ~/catkin_ws/src/JackalNavigation && git pull origin master
 
 RUN /bin/bash -c '. /opt/ros/indigo/setup.bash;cd ~/catkin_ws/src/ && catkin_create_pkg jackal_navigation geometry_msgs rospy'
-RUN cp -r ~/catkin_ws/src/JackalNavigation/* ~/catkin_ws/src/jackal_navigation/
+RUN cp -r ~/catkin_ws/src/JackalNavigation/JackalNavigation/* ~/catkin_ws/src/jackal_navigation/
 RUN chmod +x ~/catkin_ws/src/jackal_navigation/scripts/*
 
 ENV ROS_MASTER_URI=http://10.42.0.68:11311
