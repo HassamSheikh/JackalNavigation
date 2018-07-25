@@ -9,7 +9,7 @@ This code requires the following:
 
 ### Setup
 Please make sure that the robot and the system on which you run the code are connected to the same network 
-(The network name is yellow in case of [our lab](http://hector.cs.ucf.edu/robotics/)).
+(The network name is yellow in case of [our lab](http://hector.cs.ucf.edu/robotics/)). You can use [this link](http://go.pardot.com/e/92812/1f4hmqP/7c4wh/246983157) for connecting Jackal to a network.
 * Clone the repository at first.
 * Open a terminal and run the following commands:
 ```
