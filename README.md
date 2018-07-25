@@ -17,7 +17,7 @@ sudo ip addr add 10.12.0.117/21 dev docker0
 sudo docker build -t jackal_navigation .
 sudo docker run -p 10.12.0.117:80:80 jackal_navigation
 ```
-If you are not creating the access point on your own computer then run this commands instead:
+If you are not creating the access point on your own computer then run these commands instead:
 ```
 sudo docker build -t jackal_navigation .
 sudo docker run --network=host jackal_navigation
