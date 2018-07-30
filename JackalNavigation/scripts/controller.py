@@ -54,7 +54,7 @@ def get():
         k=inkey()
         if k!='':break
     if k=='\x1b[A':
-        print "forward"
+        print "ffffffffffard"
         jackal.move_forward()
     elif k=='\x1b[B':
         print "backward"
@@ -73,4 +73,3 @@ if __name__ == '__main__':
     jackal = Jackal()
     while True:
         get()
-
