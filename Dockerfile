@@ -8,7 +8,7 @@ RUN mkdir -p ~/catkin_ws/src/JackalNavigation
 
 RUN /bin/bash -c '. /opt/ros/indigo/setup.bash; cd ~/catkin_ws/src && catkin_init_workspace'
 RUN /bin/bash -c '. opt/ros/indigo/setup.bash; cd ~/catkin_ws && catkin_make'
-RUN git clone https://github.com/siavash-khodadadeh/JackalNavigation.git ~/catkin_ws/src/JackalNavigation
+RUN git clonehttps://github.com/HassamSheikh/JackalNavigation.git ~/catkin_ws/src/JackalNavigation
 RUN cd ~/catkin_ws/src/JackalNavigation && git pull origin master
 
 RUN /bin/bash -c '. /opt/ros/indigo/setup.bash;cd ~/catkin_ws/src/ && catkin_create_pkg jackal_navigation geometry_msgs rospy'
@@ -22,4 +22,3 @@ ENV ROS_MASTER_URI=http://192.168.10.102:11311
 ENV ROS_IP=192.168.10.104
 
 CMD ["roscore"]
-
